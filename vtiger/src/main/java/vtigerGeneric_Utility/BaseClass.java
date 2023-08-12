@@ -40,7 +40,8 @@ public class BaseClass
 	public void BCconfig() throws Throwable  
 	//public void BCconfig(String BROWSER) throws Throwable        //for cross browsing
 	{
-		String BROWSER=fu.getProerties("browser");             //for batch and group execution
+		//String BROWSER=fu.getProerties("browser");             //for batch and group execution
+		String BROWSER=System.getProerties("browser");
 		//String BROWSER=System.getProperty("browser");            //for mvn runtime provider
 		//runtime polymorphism
 		if(BROWSER.equalsIgnoreCase("chrome"))
@@ -63,7 +64,8 @@ public class BaseClass
 		wu.maximise(driver);
 		//Thread.sleep(1000);
 		wu.wait(driver); 
-		String URL=fu.getProerties("url");
+		//String URL=fu.getProerties("url");
+		String URL=System.getProerties("url");
 		driver.get(URL);
 		
 		
